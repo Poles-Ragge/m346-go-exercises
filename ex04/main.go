@@ -18,6 +18,7 @@ const (
 )
 
 func outputWithZodiacSign(p Person) {
+
 	var zodiacSign rune = '?'
 
 	// TODO: Assign proper value to zodiacSign using if/else branching.
@@ -31,6 +32,7 @@ type FullName struct {
 	FirstName string
 	LastName  string
 }
+
 type BirthDate struct {
 	Day   byte
 	Month byte
@@ -42,16 +44,28 @@ type Person struct {
 	BirthDate
 }
 
+//
+
 func main() {
+
 	grace := Person{FullName{"Grace", "Hopper"}, BirthDate{9, 12, 1906}}
+
 	dennis := Person{FullName{"Dennis", "Ritchie"}, BirthDate{9, 9, 1941}}
+
 	rick := Person{FullName{"Rick", "Astley"}, BirthDate{6, 2, 1966}}
+
 	edsger := Person{FullName{"Edsger", "Dijkstra"}, BirthDate{11, 5, 1930}}
+
 	alan := Person{FullName{"Alan", "Turing"}, BirthDate{23, 6, 1912}}
 
 	outputWithZodiacSign(grace)
+
 	outputWithZodiacSign(dennis)
+
 	outputWithZodiacSign(rick)
+
 	outputWithZodiacSign(edsger)
+
 	outputWithZodiacSign(alan)
+
 }
